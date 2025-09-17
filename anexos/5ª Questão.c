@@ -7,45 +7,35 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 
 #include <stdio.h>
-
 #define TAMANHO 5
 
-int main() {
-    int vetor[TAMANHO], vetor2[TAMANHO];
-    int i, temp;
-
-    printf("Digite 5 números para o primeiro vetor:\n");
-    for (i = 0; i < TAMANHO; i++) {
-        printf("Primeiro Vetor[%d]: ", i);
-        scanf("%d", &vetor[i]);
+int vetor1[5], vetor2[5], var_temporaria;
+int main()
+{
+    printf("Digite os números para o primeiro vetor: \n");
+    for(int i = 0; i < 5; i++){
+        scanf("%d", &vetor1[i]);
     }
-
-
-    printf("\nDigite 5 números para o segundo vetor:\n");
-    for (i = 0; i < TAMANHO; i++) {
-        printf("Segundo Vetor[%d]: ", i);
+    
+    printf("Digite os números para o segundo vetor: \n");
+    for(int i = 0; i < 5; i++){
         scanf("%d", &vetor2[i]);
     }
-
-
-    for (i = 0; i < TAMANHO; i++) {
-        temp = vetor[i];
-        vetor[i] = vetor2[i];
-        vetor2[i] = temp;
+    
+    for(int i = 0; i < 5; i++){
+        var_temporaria = vetor1[i];
+        vetor1[i] = vetor2[i];
+        vetor2[i] = var_temporaria;
     }
-
-    printf("\nPrimeiro Vetor após a troca:\n");
-    for (i = 0; i < TAMANHO; i++) {
-        printf("%d ", vetor[i]);
+    
+    printf("Valores do vetor 1: ");
+    for(int i = 0; i < 5;i++){
+        printf("%d", vetor1[i]);
     }
-
-
-    printf("\nSegundo Vetor após a troca:\n");
-    for (i = 0; i < TAMANHO; i++) {
-        printf("%d ", vetor2[i]);
+    
+    printf("\nValores do vetor 2: ");
+    for(int i = 0; i < 5; i++){
+        printf("%d", vetor2[i]);
     }
-
-
-    printf("\n");
-    return 0;
+    
 }
