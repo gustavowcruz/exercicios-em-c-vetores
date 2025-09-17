@@ -5,31 +5,25 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
+
 #include <stdio.h>
 
-int main() {
-    int numeroInicial, numeroFinal, soma = 0;
+int ponto1, ponto2, soma=0;
+int main()
+{
+    printf("Digite o números para o primeiro ponto: \n");
+    scanf("%d", &ponto1);
     
-    printf("Digite o primeiro número do Intervalo: ");
-    scanf("%d", &numeroInicial);
+    printf("digite o valor para o segundo ponto do intervalo: \n");
+    scanf("%d", &ponto2);
     
-    printf("Digite o último número do intervalo: ");
-    scanf("%d", &numeroFinal);
-    
-    if (numeroInicial > numeroFinal) {
-        int temp = numeroInicial;
-        numeroInicial = numeroFinal;
-        numeroFinal = temp;
-        
-    }
-    
-    for (int i = numeroInicial; i <= numeroFinal; i++) {
-        if (i % 2 == 0) {
-            soma += i;
+    for(int i = ponto1; i <= ponto2; i++){
+        if(i % 2 == 0){
+            soma+=i;
         }
     }
     
-    printf("A soma dos números pares entre %d e %d é: %d\n", numeroInicial, numeroFinal, soma);
+    printf("Soma dos pares no intervalo: %d", soma);
     
     return 0;
 }
